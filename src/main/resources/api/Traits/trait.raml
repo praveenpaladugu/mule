@@ -1,0 +1,45 @@
+#%RAML 1.0 Trait
+responses:
+  200:
+    body:
+      application/json:
+        example:
+          [
+  {
+    "name": "Bangalore (Bengaluru) Airport",
+    "code": "BLR1",
+    "cityCode": "BLR1"
+  },
+  {
+    "name": "Delhi Airport",
+    "code": "DEL",
+    "cityCode": "DEL"
+  },
+  {
+    "name": "Mumbai Airport",
+    "code": "BOM",
+    "cityCode": "BOM"
+  },
+  {
+    "name": "Shamshabad Airport",
+    "code": "HYD",
+    "cityCode": "HYD"
+  }
+]
+
+  400:
+    body:
+      application/json:
+        example:
+          {
+            Msg : Bad Request
+          }
+
+  500:
+    body:
+      application/json:
+        example:
+          {
+            Msg: Internal Server Error
+          }
+  

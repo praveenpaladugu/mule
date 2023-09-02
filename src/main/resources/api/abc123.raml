@@ -1,0 +1,28 @@
+#%RAML 1.0
+title: abc123
+
+version: v1
+description: Practising Project
+
+protocols:
+  - HTTP
+  - HTTPS
+
+uses:
+  lib: Libraries/library.raml
+  
+/test:
+  description: list of flights
+  is:
+    - lib.errRes
+  get:
+    headers:
+      client-id:
+        type: string
+        required: true
+        example: abcd12345
+          
+    responses:
+      200:
+        body:
+          application/json:
